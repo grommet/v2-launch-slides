@@ -7,9 +7,9 @@ Fork this repository to create a web-based slide presentation.
 - Install [git](https://git-scm.com/downloads)
 - Install [nodejs](https://nodejs.org/en/download/)
 - Install [yarn](https://yarnpkg.com/en/docs/install)
-- An accound on [GitHub](https://github.com)
+- An account on [GitHub](https://github.com)
 
-## Get Started
+## Start
 
 - Click the `Fork` button in the upper right of [this page](https://github.com/grommet/grommet-slides)
 
