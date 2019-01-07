@@ -10,10 +10,11 @@ export interface IProps {
 }
 
 const Slide: React.SFC<IProps> = ({
-  align, animation, background, children, components, justify,
+  align, animation, background, children, components, justify, ...rest
 }) => (
   <Box fill={true} background={background} pad='xlarge' animation="fadeIn">
     <Box
+      {...rest}
       fill={true}
       animation={typeof animation === 'object'
         ? animation : { type: animation, size: 'large' }}
