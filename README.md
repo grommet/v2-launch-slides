@@ -16,20 +16,20 @@ Fork this repository to create a web-based slide presentation.
 - Open a terminal and clone your fork to your computer.
 
 ```
-# git clone <url of your fork>
+git clone <url of your fork>
 ```
 
 - Install dependencies
 
 ```
-# cd <directory created above>
-# yarn install
+cd <directory created above>
+yarn install
 ```
 
 - See it in action
 
 ```
-# yarn start
+yarn start
 ```
 
 ## Editing
@@ -41,7 +41,7 @@ Also, any local images should be placed in `/public`.
 ## Build
 
 ```
-# yarn build
+yarn build
 ```
 
 ## Deploy
@@ -53,9 +53,9 @@ Create an account with [Netlify](https://netlify.com). Drop the `build` folder t
 Peserve your changes back to GitHub.
 
 ```
-# git add .
-# git commit -m "your message"
-# git push
+git add .
+git commit -m "your message"
+git push
 ```
 
 

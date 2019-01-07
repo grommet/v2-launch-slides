@@ -11,9 +11,10 @@ There are two parts to a Slide, the properties of the `<Slide>` component:
 
 | property | value |
 |----------|-------|
+| align | [Box animation](https://v2.grommet.io/box#align) |
 | animation | [Box animation](https://v2.grommet.io/box#animation) |
 | background | [Box animation](https://v2.grommet.io/box#background) |
 | components | [Markdown components](https://v2.grommet.io/markdown#components) |
-
+| justify | [Box animation](https://v2.grommet.io/box#justify) |
 
 Any images should be added to the `public` folder at the root of this repository. They can then be referenced in the Markdown content or Slide background.
