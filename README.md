@@ -2,13 +2,18 @@
 
 Fork this repository to create a web-based slide presentation.
 
-## Get Started
+## Prerequisites
 
-- Log in to GitHub, if not already
+- Install [git](https://git-scm.com/downloads)
+- Install [nodejs](https://nodejs.org/en/download/)
+- Install [yarn](https://yarnpkg.com/en/docs/install)
+- An accound on [GitHub](https://github.com)
+
+## Get Started
 
 - Click the `Fork` button in the upper right of [this page](https://github.com/grommet/grommet-slides)
 
-- Open a terminal and clone your fork to your computer
+- Open a terminal and clone your fork to your computer.
 
 ```
 # git clone <url of your fork>
