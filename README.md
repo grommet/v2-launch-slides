@@ -26,6 +26,12 @@ Fork this repository to create a web-based slide presentation.
 # yarn install
 ```
 
+- See it in action
+
+```
+# yarn start
+```
+
 ## Editing
 
 Edit slide content in `/src/slides`. Make sure you update `/src/slides/index.tsx` to indicate the order you'd like the slides displayed.
