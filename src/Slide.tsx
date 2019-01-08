@@ -23,7 +23,7 @@ const Slide: React.SFC<IProps> = ({
       justify={justify}
     >
       <Markdown components={components}>
-        {children.replace(/^\s+/g, '')}
+        {children.replace(/^[^\S\r\n]+/gm, '')}
       </Markdown>
     </Box>
   </Box>
