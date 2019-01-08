@@ -5,6 +5,7 @@ export interface IProps {
   align?: BoxProps['align'],
   animation?: BoxProps['animation'],
   background?: BoxProps['background'],
+  children: string,
   components?: MarkdownProps['components'],
   justify?: BoxProps['justify'],
 }
@@ -22,7 +23,7 @@ const Slide: React.SFC<IProps> = ({
       justify={justify}
     >
       <Markdown components={components}>
-        {children}
+        {children.replace(/^\s+/g, '')}
       </Markdown>
     </Box>
   </Box>

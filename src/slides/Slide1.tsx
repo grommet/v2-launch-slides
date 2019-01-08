@@ -8,7 +8,7 @@ export default () => (
     components={{ h1: { props: { size: 'xlarge' } } }}
   >
     {`
-# Slide 1
+      # Slide 1
     `}
   </Slide>
 );

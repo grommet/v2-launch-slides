@@ -9,7 +9,7 @@ export default () => (
     justify="start"
   >
     {`
-# Slide 3
+      # Slide 3
     `}
   </Slide>
 );
