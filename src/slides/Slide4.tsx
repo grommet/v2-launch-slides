@@ -3,6 +3,8 @@ import Slide from '../Slide';
 
 export default () => (
   <Slide>
-    # Slide 4
+    {`
+# Slide 4
+    `}
   </Slide>
 );

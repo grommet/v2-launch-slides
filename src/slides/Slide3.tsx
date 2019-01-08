@@ -8,6 +8,8 @@ export default () => (
     background="accent-3"
     justify="start"
   >
-    # Slide 3
+    {`
+# Slide 3
+    `}
   </Slide>
 );

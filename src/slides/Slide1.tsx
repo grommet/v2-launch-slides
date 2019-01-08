@@ -7,6 +7,8 @@ export default () => (
     background="accent-1"
     components={{ h1: { props: { size: 'xlarge' } } }}
   >
-    # Slide 1
+    {`
+# Slide 1
+    `}
   </Slide>
 );
