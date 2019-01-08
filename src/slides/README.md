@@ -13,11 +13,11 @@ There are two parts to a Slide:
 
 | property | value |
 |----------|-------|
-| align | [Box animation](https://v2.grommet.io/box#align) |
+| align | [Box align](https://v2.grommet.io/box#align) |
 | animation | [Box animation](https://v2.grommet.io/box#animation) |
-| background | [Box animation](https://v2.grommet.io/box#background) |
+| background | [Box background](https://v2.grommet.io/box#background) |
 | components | [Markdown components](https://v2.grommet.io/markdown#components) |
-| justify | [Box animation](https://v2.grommet.io/box#justify) |
+| justify | [Box justify](https://v2.grommet.io/box#justify) |
 
 ### Content of the `<Slide>` component
 
