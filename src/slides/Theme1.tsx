@@ -6,7 +6,7 @@ import Slide from '../Slide';
 export default () => (
   <Slide background="dark-1">
     <Box direction="row" gap="xlarge" align="start">
-      <Box gap="medium">
+      <Box gap="medium" flex={false}>
         <Button primary={true} label="Submit" />
         <Button label="Cancel" />
       </Box>
