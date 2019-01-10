@@ -14,7 +14,7 @@ export default () => (
   <Slide background="dark-1">
     <Box direction="row" gap="xlarge" align="center">
       <ThemeContext.Extend value={myTheme}>
-        <Box gap="medium">
+        <Box gap="medium" flex={false}>
           <Button primary={true} label="Submit" />
           <Button label="Cancel" />
         </Box>
