@@ -76,9 +76,15 @@ class Viewer extends React.Component<IProps, IState> {
   public onKeyDown = (event: KeyboardEvent): void => {
     const { slides } = this.props;
     const { keyCode } = event;
+    // // tslint:disable-next-line
+    // console.log('!!! onKeyDown', keyCode);
     const current = keyCode - 49;
     if (current >= 0 && current <= (slides.length - 1)) {
       this.setState({ current });
+    } else if (keyCode === 34) {
+      this.onNext();
+    } else if (keyCode === 33) {
+      this.onPrevious();
     }
   }
 
@@ -161,6 +167,9 @@ class Viewer extends React.Component<IProps, IState> {
           target="document"
           onLeft={this.onPrevious}
           onRight={this.onNext}
+          onUp={this.onPrevious}
+          onDown={this.onNext}
+          onEnter={this.onNext}
           onShift={this.enterFullscreen}
           onEsc={this.exitFullscreen}
           onKeyDown={this.onKeyDown}

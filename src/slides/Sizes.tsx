@@ -42,11 +42,11 @@ export default () => (
       </Box>
     </Box>
     <Box alignSelf="stretch" direction="row" justify="between" align="center" gap="large">
-      <Heading size="large">size</Heading>
-      <Paragraph size="large">
+      <Heading margin="none" size="large">size</Heading>
+      <Paragraph margin="none" size="large">
         1/4 xlarge = 1/2 large = 1 medium = 2 small = 4 xsmall
       </Paragraph>
-      <Paragraph size="large">
+      <Paragraph margin="none" size="large">
         Box Grid Meter Chart Calendar
       </Paragraph>
     </Box>

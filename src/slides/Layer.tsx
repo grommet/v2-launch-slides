@@ -29,11 +29,22 @@ export default class LayerSlide extends React.Component<any, IState> {
     });
   }
 
+  public onKeyDown = (event: KeyboardEvent): void => {
+    const { keyCode } = event;
+    // // tslint:disable-next-line
+    // console.log('!!! onKeyDown', keyCode);
+    if (keyCode === 190) {
+      this.onNext();
+    } else if (keyCode === 188) {
+      this.onPrevious();
+    }
+  }
+
   public render() {
     const { current } = this.state;
     return (
       <Slide background="neutral-2" align="stretch">
-        <Keyboard target="document" onDown={this.onNext} onUp={this.onPrevious}>
+        <Keyboard target="document" onKeyDown={this.onKeyDown}>
           <Box overflow="auto">
             <Box flex={false} height="small" background="neutral-1" />
             <Box flex={false} height="small" background="neutral-3" />
