@@ -3,7 +3,7 @@ import * as React from 'react';
 import Slide from '../Slide';
 
 export default () => (
-  <Slide background="dark-2">
+  <Slide background="dark-1">
     <Box direction="row" justify="center" align="start">
       <Box background="neutral-2" justify="center" height="medium" width="medium">
         <Meter type="circle" values={[{ label: 'count', value: 25 }]} size="medium" />
