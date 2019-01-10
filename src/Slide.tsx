@@ -29,8 +29,8 @@ const deepMerge = (target: object, ...sources: object[]): object => {
 };
 
 const baseComponents = {
-  h1: { props: { size: 'xlarge', textAlign: 'center' }},
-  h2: { props: { size: 'xlarge', textAlign: 'center' }},
+  h1: { props: { size: 'xlarge' }},
+  h2: { props: { size: 'xlarge' }},
   li: {
     component: Text,
     props: { as: 'li', color: 'accent-1', size: 'xlarge' }
