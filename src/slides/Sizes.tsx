@@ -1,29 +1,54 @@
-import { Box, Heading, Meter, Paragraph } from 'grommet';
+import { Box, Calendar, Heading, Meter, Paragraph } from 'grommet';
 import * as React from 'react';
 import Slide from '../Slide';
 
 export default () => (
   <Slide background="dark-2">
     <Box direction="row" justify="center" align="start">
-      <Box background="neutral-3" pad={{ bottom: 'large', right: 'large' }}>
-        <Box background="accent-3" pad={{ bottom: 'medium', right: 'medium' }}>
-          <Box background="neutral-1" pad={{ bottom: 'small', right: 'small' }}>
-            <Box background="accent-1" pad="xsmall" />
-          </Box>
-        </Box>
-      </Box>
-      <Box background="neutral-2" justify="center">
+      <Box background="neutral-2" justify="center" height="medium" width="medium">
         <Meter type="circle" values={[{ label: 'count', value: 25 }]} size="medium" />
       </Box>
-      <Box background="neutral-1" justify="center">
-        <Meter type="circle" values={[{ label: 'count', value: 25 }]} size="small" />
+      <Box background="neutral-1" direction="row" height="medium" width="medium">
+        <Box>
+          <Meter type="circle" values={[{ label: 'count', value: 25 }]} size="small" />
+          <Meter type="circle" values={[{ label: 'count', value: 25 }]} size="small" />
+        </Box>
+        <Calendar size="small" />
       </Box>
-      <Box pad={{ horizontal: 'large' }}>
-        <Paragraph size="xxlarge">4 small</Paragraph>
-        <Paragraph size="xxlarge">2 medium</Paragraph>
-        <Paragraph size="xxlarge">1 large</Paragraph>
+      <Box margin={{ left: 'large' }}>
+        <Box direction="row">
+          <Box background="accent-1" pad="large" />
+        </Box>
+        <Box direction="row">
+          <Box background="accent-2" pad="medium" />
+          <Box background="neutral-3" pad="medium" />
+        </Box>
+        <Box direction="row">
+          <Box background="accent-1" pad="small" />
+          <Box background="neutral-3" pad="small" />
+          <Box background="accent-2" pad="small" />
+          <Box background="accent-1" pad="small" />
+        </Box>
+        <Box direction="row">
+          <Box background="accent-2" pad="xsmall" />
+          <Box background="neutral-3" pad="xsmall" />
+          <Box background="accent-1" pad="xsmall" />
+          <Box background="accent-2" pad="xsmall" />
+          <Box background="neutral-3" pad="xsmall" />
+          <Box background="accent-1" pad="xsmall" />
+          <Box background="accent-2" pad="xsmall" />
+          <Box background="neutral-3" pad="xsmall" />
+        </Box>
       </Box>
     </Box>
-    <Heading alignSelf="start" size="large">size</Heading>
+    <Box alignSelf="stretch" direction="row" justify="between" align="center" gap="large">
+      <Heading size="large">size</Heading>
+      <Paragraph size="large">
+        1/4 xlarge = 1/2 large = 1 medium = 2 small = 4 xsmall
+      </Paragraph>
+      <Paragraph size="large">
+        Box, Grid, Meter, Chart, Calendar
+      </Paragraph>
+    </Box>
   </Slide>
 );
