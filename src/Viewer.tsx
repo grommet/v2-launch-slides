@@ -38,7 +38,7 @@ class Viewer extends React.Component<IProps, IState> {
 
   private timer?: any;
 
-  private busy?: boolean;
+  // private busy?: boolean;
 
   public componentDidMount () {
     document.addEventListener('touchstart', this.onTouchStart);
@@ -83,20 +83,20 @@ class Viewer extends React.Component<IProps, IState> {
   }
 
   public onWheel = (event: any): void => {
-    event.preventDefault();
-    const deltaX = event.deltaX;
-    if (!this.busy && Math.abs(deltaX) > 50) {
-      if (deltaX > 0) {
-        this.onNext();
-      } else if (deltaX < 0) {
-        this.onPrevious();
-      }
-      this.busy = true;
-    }
-    clearTimeout(this.timer);
-    this.timer = setTimeout(() => {
-      this.busy = false;
-    }, 50);
+    // event.preventDefault();
+    // const deltaX = event.deltaX;
+    // if (!this.busy && Math.abs(deltaX) > 50) {
+    //   if (deltaX > 0) {
+    //     this.onNext();
+    //   } else if (deltaX < 0) {
+    //     this.onPrevious();
+    //   }
+    //   this.busy = true;
+    // }
+    // clearTimeout(this.timer);
+    // this.timer = setTimeout(() => {
+    //   this.busy = false;
+    // }, 50);
   }
 
   public onTouchStart = (event: any): void => {
@@ -154,6 +154,7 @@ class Viewer extends React.Component<IProps, IState> {
       <Box
         ref={this.ref}
         fill={true}
+        background="black"
         onWheel={this.onWheel}
       >
         <Keyboard
