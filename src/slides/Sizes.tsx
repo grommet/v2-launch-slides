@@ -47,7 +47,7 @@ export default () => (
         1/4 xlarge = 1/2 large = 1 medium = 2 small = 4 xsmall
       </Paragraph>
       <Paragraph size="large">
-        Box, Grid, Meter, Chart, Calendar
+        Box Grid Meter Chart Calendar
       </Paragraph>
     </Box>
   </Slide>
