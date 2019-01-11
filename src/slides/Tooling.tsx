@@ -6,7 +6,7 @@ export default () => (
     {`
 ## create-react-app (w/o eject)
 
-## typescript typings
+## typescript
     `}
   </Slide>
 );

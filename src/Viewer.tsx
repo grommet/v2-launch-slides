@@ -46,6 +46,8 @@ class Viewer extends React.Component<IProps, IState> {
     document.addEventListener('touchend', this.onTouchEnd);
     document.addEventListener('touchcancel', this.onTouchCancel);
     // document.addEventListener('wheel', this.onWheel);
+    window.addEventListener('popstate', this.onPopState);
+    this.onPopState();
   }
 
   public componentWillUnmount () {
@@ -55,6 +57,7 @@ class Viewer extends React.Component<IProps, IState> {
     document.removeEventListener('touchend', this.onTouchEnd);
     document.removeEventListener('touchcancel', this.onTouchCancel);
     // document.removeEventListener('wheel', this.onWheel);
+    window.removeEventListener('popstate', this.onPopState);
   }
 
   public onPrevious = (): void => {
@@ -62,7 +65,7 @@ class Viewer extends React.Component<IProps, IState> {
     const { current } = this.state;
     this.setState({
       current: (current > 0) ? (current - 1) : (slides.length - 1),
-    });
+    }, this.updateLocation);
   }
 
   public onNext = (): void => {
@@ -70,17 +73,15 @@ class Viewer extends React.Component<IProps, IState> {
     const { current } = this.state;
     this.setState({
       current: (current < (slides.length - 1)) ? (current + 1) : 0,
-    });
+    }, this.updateLocation);
   }
 
   public onKeyDown = (event: KeyboardEvent): void => {
     const { slides } = this.props;
     const { keyCode } = event;
-    // // tslint:disable-next-line
-    // console.log('!!! onKeyDown', keyCode);
     const current = keyCode - 49;
     if (current >= 0 && current <= (slides.length - 1)) {
-      this.setState({ current });
+      this.setState({ current }, this.updateLocation);
     } else if (keyCode === 34) {
       this.onNext();
     } else if (keyCode === 33) {
@@ -152,6 +153,12 @@ class Viewer extends React.Component<IProps, IState> {
     doc.webkitExitFullscreen();
   }
 
+  public onPopState = (): void => {
+    const { location } = document;
+    const current = parseInt(location.hash.slice(1), 10);
+    this.setState({ current });
+  };
+
   public render() {
     const { slides } = this.props;
     const { current } = this.state;
@@ -178,6 +185,11 @@ class Viewer extends React.Component<IProps, IState> {
         </Keyboard>
       </Box>
     );
+  }
+
+  private updateLocation = (): void => {
+    const { current } = this.state;
+    window.history.pushState(undefined, '', `#${current}`);
   }
 }
 
