@@ -39,6 +39,7 @@ import Storybook from './Storybook';
 import Theme1 from './Theme1';
 import Theme2 from './Theme2';
 import Theme3 from './Theme3';
+import Tooling from './Tooling';
 
 const slides = [
   chrisSlide1,
@@ -72,6 +73,7 @@ const slides = [
   Theme1, Theme2, Theme3,
   Stack1, Stack2, Stack3,
   Layer, Drop1,
+  Tooling,
   Storybook, CodeSandbox,
   Deck,
 ];
