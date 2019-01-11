@@ -40,11 +40,22 @@ export default class DropSlide extends React.Component<any, IState> {
     });
   }
 
+  public onKeyDown = (event: KeyboardEvent): void => {
+    const { keyCode } = event;
+    // // tslint:disable-next-line
+    // console.log('!!! onKeyDown', keyCode);
+    if (keyCode === 190) {
+      this.onNext();
+    } else if (keyCode === 188) {
+      this.onPrevious();
+    }
+  }
+
   public render() {
     const { current } = this.state;
     return (
       <Slide background="neutral-3" align="stretch">
-        <Keyboard target="document" onDown={this.onNext} onUp={this.onPrevious}>
+        <Keyboard target="document" onKeyDown={this.onKeyDown}>
           <Box align="start" justify="center">
             <Box ref={this.ref} pad="medium" background="neutral-1" round="small">
               <Text size="xlarge">Some Control</Text>

@@ -12,7 +12,7 @@ export default () => (
     >
     {`
 
-      ![alt text](lozzi-avatar.png "avatar")
+      ![alt text](grommet-peep-chris.png "avatar")
 
       # chris carlozzi
       ## grommet founder, head of design at hpe

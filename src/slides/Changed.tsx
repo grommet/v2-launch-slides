@@ -3,8 +3,6 @@ import Slide from '../Slide';
 
 export default () => (
   <Slide background="dark-1">
-    {`## v1 - v2
-    
-# Change`}
+    {`# Fresh Newness`}
   </Slide>
 );

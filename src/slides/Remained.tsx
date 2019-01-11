@@ -3,8 +3,6 @@ import Slide from '../Slide';
 
 export default () => (
   <Slide background="dark-1">
-    {`## v1 - v2
-    
-# Remain`}
+    {`# Stable Principles`}
   </Slide>
 );
