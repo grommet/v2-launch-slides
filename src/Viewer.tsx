@@ -1,4 +1,4 @@
-import { Box, Keyboard } from 'grommet';
+import { Box, Keyboard, RangeInput, Stack } from 'grommet';
 import * as React from 'react';
 
 export interface IProps {
@@ -7,6 +7,7 @@ export interface IProps {
 
 interface IState {
   current: number;
+  showScrubber: boolean;
 }
 
 interface ITouch {
@@ -30,7 +31,7 @@ const createTouch = (event: React.TouchEvent<HTMLDivElement>) :(ITouch | undefin
 }
 
 class Viewer extends React.Component<IProps, IState> {
-  public readonly state: Readonly<IState> = { current: 0 }
+  public readonly state: Readonly<IState> = { current: 0, showScrubber: false }
 
   private ref = React.createRef<HTMLDivElement>();
 
@@ -87,6 +88,22 @@ class Viewer extends React.Component<IProps, IState> {
     } else if (keyCode === 33) {
       this.onPrevious();
     }
+  }
+
+  public onMouseMove = (): void => {
+    const { showScrubber } = this.state;
+    if (!showScrubber) {
+      this.setState({ showScrubber: true });
+    }
+    clearTimeout(this.timer);
+    this.timer = setTimeout(() => {
+      this.setState({ showScrubber: false });
+    }, 3000);
+  }
+
+  public onScrub = (event: React.FormEvent<HTMLInputElement>): void => {
+    const current: number = parseInt(event.currentTarget.value, 10);
+    this.setState({ current }, this.updateLocation);
   }
 
   public onWheel = (event: any): void => {
@@ -161,7 +178,7 @@ class Viewer extends React.Component<IProps, IState> {
 
   public render() {
     const { slides } = this.props;
-    const { current } = this.state;
+    const { current, showScrubber } = this.state;
     const Slide: React.ComponentType = slides[current];
     return (
       <Box
@@ -169,6 +186,7 @@ class Viewer extends React.Component<IProps, IState> {
         fill={true}
         background="black"
         onWheel={this.onWheel}
+        onMouseMove={this.onMouseMove}
       >
         <Keyboard
           target="document"
@@ -181,7 +199,19 @@ class Viewer extends React.Component<IProps, IState> {
           onEsc={this.exitFullscreen}
           onKeyDown={this.onKeyDown}
         >
-          <Slide />
+          <Stack fill={true}>
+            <Slide />
+            {showScrubber && (
+              <Box animation="fadeIn" fill={true} justify="end">
+                <RangeInput
+                  min={0}
+                  max={slides.length - 1}
+                  value={current}
+                  onChange={this.onScrub}
+                />
+              </Box>
+            )}
+          </Stack>
         </Keyboard>
       </Box>
     );
