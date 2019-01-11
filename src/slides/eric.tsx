@@ -11,6 +11,7 @@ export default () => (
     background="neutral-2"
     >
     {`
+      ![alt text](grommet-peep-eric.png "avatar")
 
       # eric soderberg
       ## grommet founder, head of grommet dev at hpe
