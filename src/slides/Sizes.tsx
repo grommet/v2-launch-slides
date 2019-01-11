@@ -4,6 +4,7 @@ import Slide from '../Slide';
 
 export default () => (
   <Slide background="dark-2">
+  <Box flex={false}>
     <Box direction="row" justify="center" align="start">
       <Box background="neutral-2" justify="center" height="medium" width="medium">
         <Meter type="circle" values={[{ label: 'count', value: 25 }]} size="medium" />
@@ -49,6 +50,7 @@ export default () => (
       <Paragraph size="large">
         Box Grid Meter Chart Calendar
       </Paragraph>
+    </Box>
     </Box>
   </Slide>
 );
