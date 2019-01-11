@@ -33,7 +33,7 @@ const baseComponents = {
   h2: { props: { size: 'xlarge' }},
   li: {
     component: Text,
-    props: { as: 'li', color: 'accent-1', size: 'xlarge' }
+    props: { as: 'li', size: 'xlarge' }
   },
   p: { props: { size: 'xlarge' }},
 }

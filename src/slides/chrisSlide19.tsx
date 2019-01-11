@@ -14,10 +14,10 @@ export default () => (
     {`
 
       # how do i apply it?
-      + another part of the community (just an important one)
-      + the foundation of hpe's design system
-      + a common language we share inside the company
-      + so i can do things like...
+      - another part of the community (just an important one)
+      - the foundation of hpe's design system
+      - a common language we share inside the company
+      - so i can do things like...
     
 
     `}
