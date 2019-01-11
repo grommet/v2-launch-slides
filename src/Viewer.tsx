@@ -155,7 +155,7 @@ class Viewer extends React.Component<IProps, IState> {
 
   public onPopState = (): void => {
     const { location } = document;
-    const current = parseInt(location.hash.slice(1), 10);
+    const current = parseInt(location.hash.slice(1), 10) || 0;
     this.setState({ current });
   };
 
