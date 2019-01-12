@@ -2,7 +2,7 @@ import { Box, Keyboard, RangeInput, Stack } from 'grommet';
 import * as React from 'react';
 
 export interface IProps {
-  slides: React.ComponentType[]
+  slides: Array<React.ComponentType & {title?: string}>
 }
 
 interface IState {
@@ -218,8 +218,11 @@ class Viewer extends React.Component<IProps, IState> {
   }
 
   private updateLocation = (): void => {
+    const { slides } = this.props;
     const { current } = this.state;
-    window.history.pushState(undefined, '', `#${current}`);
+    const title = slides[current].title || slides[current].name || '';
+    window.history.pushState(undefined, title, `#${current}`);
+    document.title = title;
   }
 }
 

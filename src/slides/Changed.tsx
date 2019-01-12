@@ -1,8 +1,12 @@
-import * as React from 'react';
-import Slide from '../Slide';
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const Changed = () => (
   <Slide background="dark-1">
     {`# Fresh Newness`}
   </Slide>
-);
+)
+
+Changed.title = "What's changed"
+
+export default Changed;
