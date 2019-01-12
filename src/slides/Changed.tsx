@@ -7,6 +7,6 @@ const Changed = () => (
   </Slide>
 )
 
-Changed.title = "What's changed"
+Changed.title = "Fresh Newness"
 
-export default Changed;
+export default Changed

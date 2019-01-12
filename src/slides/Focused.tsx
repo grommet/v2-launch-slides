@@ -1,8 +1,12 @@
-import * as React from 'react';
-import Slide from '../Slide';
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const Focused = () => (
   <Slide background="neutral-1">
     {`# 80%`}
   </Slide>
-);
+)
+
+Focused.title = "80%"
+
+export default Focused

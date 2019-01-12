@@ -1,8 +1,12 @@
-import * as React from 'react';
-import Slide from '../Slide';
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
-  <Slide background='url(buzz.gif)' align="start" justify="end">
+const Coordination = () => (
+  <Slide background="url(buzz.gif)" align="start" justify="end">
     {`# Collaboration`}
   </Slide>
-);
+)
+
+Coordination.title = "Collaboration"
+
+export default Coordination

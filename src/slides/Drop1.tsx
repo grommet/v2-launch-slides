@@ -18,6 +18,8 @@ interface IState {
 }
 
 export default class DropSlide extends React.Component<any, IState> {
+  public static title = "Drop"
+
   public readonly state: Readonly<IState> = { current: 0 }
 
   private ref = React.createRef<HTMLDivElement>();

@@ -1,8 +1,8 @@
-import { Box, Heading, Layer } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import { Box, Heading, Layer } from 'grommet'
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const CodeSandbox = () => (
   <Slide background="url(CodeSandbox.png)">
     <Layer position="center" plain={true}>
       <Box pad="large" background={{ color: 'black', opacity: 'strong' }} round={true}>
@@ -10,4 +10,8 @@ export default () => (
       </Box>
     </Layer>
   </Slide>
-);
+)
+
+CodeSandbox.title = "CodeSandbox"
+
+export default CodeSandbox
