@@ -1,8 +1,8 @@
-import { Box, Heading, Image } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import { Box, Heading, Image } from 'grommet'
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const V1Resources = () => (
   <Slide background="neutral-2">
     <Heading alignSelf="start" size="medium">grommet 1</Heading>
     <Box direction="row-responsive" gap="large" align="start" alignContent='start'>
@@ -20,4 +20,8 @@ export default () => (
       </Box>
     </Box>
   </Slide>
-);
+)
+
+V1Resources.title = "v1 Resources"
+
+export default V1Resources

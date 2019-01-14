@@ -22,6 +22,6 @@ const Chris = () => (
   </Slide>
 );
 
-Chris.title = "Chris"
+Chris.title = "Chris Carlozzi"
 
 export default Chris;

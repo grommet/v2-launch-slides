@@ -1,8 +1,8 @@
-import { Box, Heading, Image, Paragraph } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import { Box, Heading, Image, Paragraph } from 'grommet'
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const BadgeIcon = () => (
   <Slide background="neutral-4">
     <Box direction="row-responsive" gap="xlarge" align="start" alignContent='center'>
       <Box flex={false} width="medium" alignContent="stretch" background="white" round='medium' pad={{ horizontal: "small", vertical: "medium" }} >
@@ -14,4 +14,8 @@ export default () => (
       </Box>
     </Box>
   </Slide>
-);
+)
+
+BadgeIcon.title = "Badge Icon"
+
+export default BadgeIcon

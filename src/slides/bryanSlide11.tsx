@@ -1,8 +1,8 @@
-import { Box, Heading, Image, Paragraph } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import { Box, Heading, Image, Paragraph } from 'grommet'
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const CustomizeCard = () => (
   <Slide background="neutral-4">
     <Box direction="row-responsive" gap="large" align="start" alignContent='start'>
       <Box flex={true} width='large' alignSelf='center'>
@@ -16,4 +16,8 @@ export default () => (
       </Box>
     </Box>
   </Slide>
-);
+)
+
+CustomizeCard.title = "Customize Card"
+
+export default CustomizeCard

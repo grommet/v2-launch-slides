@@ -1,8 +1,8 @@
-import { Box, Heading, Image, Paragraph } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import { Box, Heading, Image, Paragraph } from 'grommet'
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const CustomizeSelect = () => (
   <Slide background="neutral-4">
     <Box direction="column" gap="medium" align="start" alignContent='start'>
       <Paragraph alignSelf="start" size="large">grommet 1</Paragraph>
@@ -12,4 +12,8 @@ export default () => (
       </Box>
     </Box>
   </Slide>
-);
+)
+
+CustomizeSelect.title = "Customize Select"
+
+export default CustomizeSelect

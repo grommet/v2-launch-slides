@@ -1,8 +1,8 @@
-import { Box, Image } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import { Box, Image } from 'grommet'
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const PositiveFeedback = () => (
   <Slide background="neutral-1">
     <Box direction="column" gap="medium" align="center" alignContent='center'>
         <Box width="large" alignContent="stretch" background="white" round='medium' pad={{ horizontal: "medium", vertical: "none" }} >
@@ -16,4 +16,8 @@ export default () => (
       </Box>
     </Box>
   </Slide>
-);
+)
+
+PositiveFeedback.title = "Positive Feedback"
+
+export default PositiveFeedback
