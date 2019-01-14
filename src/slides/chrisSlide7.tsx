@@ -16,7 +16,7 @@ export default () => (
     >
     {`
 
-      # but i'm a desiger
+      # but i'm a designer
 
     `}
   </Slide>
