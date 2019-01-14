@@ -21,6 +21,6 @@ const Eric = () => (
   </Slide>
 )
 
-Eric.title = "eric"
+Eric.title = "Eric Soderberg"
 
 export default Eric

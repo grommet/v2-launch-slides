@@ -1,8 +1,8 @@
 import { Box, Calendar, Heading, Meter, Paragraph } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import * as React from 'react'
+import Slide from '../Slide'
 
-export default () => (
+const Size = () => (
   <Slide background="dark-1">
     <Box flex={false}>
       <Box direction="row" justify="center" align="start">
@@ -53,4 +53,8 @@ export default () => (
       </Box>
     </Box>
   </Slide>
-);
+)
+
+Size.title = "Size"
+
+export default Size
