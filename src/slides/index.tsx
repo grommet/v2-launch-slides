@@ -1,3 +1,17 @@
+import Agenda from './Agenda';
+import bryanSlide1 from './bryanSlide1';
+import bryanSlide10 from './bryanSlide10';
+import bryanSlide11 from './bryanSlide11';
+import bryanSlide12 from './bryanSlide12';
+import bryanSlide13 from './bryanSlide13';
+import bryanSlide2 from './bryanSlide2';
+import bryanSlide3 from './bryanSlide3';
+import bryanSlide4 from './bryanSlide4';
+import bryanSlide5 from './bryanSlide5';
+import bryanSlide6 from './bryanSlide6';
+import bryanSlide7 from './bryanSlide7';
+import bryanSlide8 from './bryanSlide8';
+import bryanSlide9 from './bryanSlide9';
 import Changed from './Changed';
 import chrisSlide1 from './chrisSlide1';
 import chrisSlide10 from './chrisSlide10';
@@ -39,9 +53,25 @@ import Storybook from './Storybook';
 import Theme1 from './Theme1';
 import Theme2 from './Theme2';
 import Theme3 from './Theme3';
+import title from './title';
 import Tooling from './Tooling';
 
 const slides = [
+  Agenda,
+  title,
+  bryanSlide1,
+  bryanSlide2,
+  bryanSlide3,
+  bryanSlide4,
+  bryanSlide5,
+  bryanSlide6,
+  bryanSlide7,
+  bryanSlide8,
+  bryanSlide9,
+  bryanSlide10,
+  bryanSlide11,
+  bryanSlide12,
+  bryanSlide13,
   chrisSlide1,
   chrisSlide2,
   chrisSlide3,

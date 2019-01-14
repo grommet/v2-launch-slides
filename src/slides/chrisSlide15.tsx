@@ -16,7 +16,7 @@ export default () => (
     >
     {`
 
-      # shape shifter
+      # chameleon
 
     `}
   </Slide>
