@@ -1,9 +1,8 @@
-import { Heading } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import { Heading } from 'grommet'
+import * as React from 'react'
+import Slide from '../Slide'
 
-
-export default () => (
+const Themeing = () => (
   <Slide
     animation="fadeIn"
     components={{ h1: { props: { size: 'large' }}, h2: { props: { size: 'large' }}, p: { props: { size: 'xlarge' }}, li: { component: Heading, props: { level: 2, size: 'large' }} }}
@@ -16,8 +15,12 @@ export default () => (
     >
     {`
 
-      # theming
+      # themeing
 
     `}
   </Slide>
-);
+)
+
+Themeing.title = "Themeing"
+
+export default Themeing

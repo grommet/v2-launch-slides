@@ -1,9 +1,8 @@
-import { Heading } from 'grommet';
-import * as React from 'react';
-import Slide from '../Slide';
+import { Heading } from 'grommet'
+import * as React from 'react'
+import Slide from '../Slide'
 
-
-export default () => (
+const MindBlown = () => (
   <Slide
     animation="fadeIn"
     components={{ h1: { props: { size: 'xlarge' }}, h2: { props: { size: 'large' }}, p: { props: { size: 'xlarge' }}, li: { component: Heading, props: { level: 2, size: 'large' }} }}
@@ -20,4 +19,8 @@ export default () => (
 
     `}
   </Slide>
-);
+)
+
+MindBlown.title = "Mind Blown"
+
+export default MindBlown
