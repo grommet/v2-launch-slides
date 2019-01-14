@@ -1,4 +1,4 @@
-import agenda from './agenda';
+import Agenda from './Agenda';
 import bryanSlide1 from './bryanSlide1';
 import bryanSlide10 from './bryanSlide10';
 import bryanSlide11 from './bryanSlide11';
@@ -57,7 +57,7 @@ import title from './title';
 import Tooling from './Tooling';
 
 const slides = [
-  agenda,
+  Agenda,
   title,
   bryanSlide1,
   bryanSlide2,
